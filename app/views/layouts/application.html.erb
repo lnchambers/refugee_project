@@ -16,7 +16,8 @@
       <nav class="nav-login">
         <%= link_to "About Us", about_path %>
         <%= render partial: "layout/login" if !current_user %>
-        Welcome, <%= current_user.first_name %>
+        Welcome, <%= current_user.first_name %>. Please <%= link_to "logout", logout_path, method: "destroy" %> <b>before</b> leaving.
+      </nav>
     </nav>
     <%= yield %>
   </body>
