@@ -9,6 +9,15 @@
   </head>
 
   <body>
+    <nav class="nav">
+      <header class="header">
+        <h1>refugee_project.</h1>
+      </header>
+      <nav class="nav-login">
+        <%= link_to "About Us", about_path %>
+        <%= render partial: "layout/login" if !current_user %>
+        Welcome, <%= current_user.first_name %>
+    </nav>
     <%= yield %>
   </body>
 </html>
