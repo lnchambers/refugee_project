@@ -1,6 +1,6 @@
 class CreateUsers < ActiveRecord::Migration[5.1]
   def change
-    create_table :users do |t|
+    create_table :users, id: :uuid, default: "uuid_generate_v4()" do |t|
       t.text :username
       t.text :first_name
       t.text :last_name
