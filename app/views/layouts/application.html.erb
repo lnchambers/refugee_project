@@ -19,6 +19,12 @@
         Welcome, <%= current_user.first_name %>. Please <%= link_to "logout", logout_path, method: "destroy" %> <b>before</b> leaving.
       </nav>
     </nav>
+    <% if flash[:success] %>
+      <div class="notice"><%= flash[:success].html_safe %></div>
+    <% end %>
+    <% if flash[:error] %>
+      <div class="notice"><%= flash[:error].html_safe %></div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
