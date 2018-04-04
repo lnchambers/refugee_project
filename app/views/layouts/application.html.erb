@@ -14,9 +14,7 @@
         <h1>refugee_project.</h1>
       </header>
       <nav class="nav-login">
-        <%= link_to "About Us", about_path %>
-        <%= render partial: "layout/login" if !current_user %>
-        Welcome, <%= current_user.first_name %>. Please <%= link_to "logout", logout_path, method: "destroy" %> <b>before</b> leaving.
+        <%= render partial: "layout/login" if user_signed_in? %>
       </nav>
     </nav>
     <% if flash[:success] %>

@@ -1,7 +1,7 @@
-class RequestController < ApplicationController
-  before_action :user_signed_in?
+class RequestsController < ApplicationController
 
   def new
+    redirect_to root_path unless user_signed_in?
   end
 
   def show

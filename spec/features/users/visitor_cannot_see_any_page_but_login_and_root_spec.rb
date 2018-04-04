@@ -7,22 +7,18 @@ describe "As a visitor" do
       visit "/dashboard/#{user.id}"
 
       expect(current_path).to eq(root_path)
-      expect(page).to have_content("You do not have sufficient priviliges")
     end
 
     it "I try to visit the request path" do
-      user = create(:user)
-      visit request_path(user)
+      visit new_request_path
 
       expect(current_path).to eq(root_path)
-      expect(page).to have_content("You do not have sufficient priviliges")
     end
 
     it "I try to visit the admin dashboard path" do
       visit admin_dashboard_path
 
       expect(current_path).to eq(root_path)
-      expect(page).to have_content("You do not have sufficient priviliges")
     end
   end
 end
