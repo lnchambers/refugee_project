@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+  get "/dashboard/:id", to: 'dashboard#show'
 
   root "welcome#index"
 
@@ -7,8 +9,6 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
 
   delete "/logout", to: "sessions#destroy"
-
-  get "/dashboard", to: 'dashboard#show'
 
   resources :requests, only: [:show, :new, :create]
 
