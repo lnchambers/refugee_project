@@ -1,4 +1,5 @@
 class Admin::UsersController < ApplicationController
+  before_action :user_signed_in?
   def new
   end
 
