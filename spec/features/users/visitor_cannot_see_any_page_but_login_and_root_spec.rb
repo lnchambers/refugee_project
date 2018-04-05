@@ -4,7 +4,7 @@ describe "As a visitor" do
   describe "I am redirected when" do
     it "I try to visit the dashboard path" do
       lambda {
-        visit dashboard_path
+        visit "/dashboard"
       }.should raise_error(ActionController::RoutingError)
     end
 

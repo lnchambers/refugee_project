@@ -56,7 +56,7 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
   config.raise_errors_for_deprecations!
-  config.expect_with(:rspec) { |c| c.syntax = :should }
+  config.expect_with(:rspec) { |c| c.syntax = :should, :expect }
   config.before(:all) do
     DatabaseCleaner.clean
   end
