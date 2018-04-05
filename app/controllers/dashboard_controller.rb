@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
-  before_action :user_signed_in?
+  before_action :check_auth
 
   def show
     @user = User.find(params[:id])

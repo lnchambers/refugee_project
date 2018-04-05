@@ -1,5 +1,6 @@
-class Admin::UsersController < ApplicationController
-  before_action :user_signed_in?
+class Admin::UsersController < BaseController
+  before_action :check_auth
+
   def new
   end
 
@@ -14,4 +15,5 @@ class Admin::UsersController < ApplicationController
 
   def show
   end
+  
 end

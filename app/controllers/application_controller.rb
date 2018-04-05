@@ -1,9 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  helper_method :current_user
-
-  def current_user
-    @current_user = User.find[session[:user_id]] if session[:user_id]
+  def check_auth
+    raise ActionController::RoutingError.new('Not Found') unless user_signed_in?
   end
 end
