@@ -1,10 +1,10 @@
 FactoryBot.define do
   factory :user do
-    username "MyText"
-    first_name "MyText"
-    last_name "MyText"
+    username "Opakawagalaga Eupanifahorious"
+    first_name "Opakawagalaga"
+    last_name "Eupanifahorious"
     role 1
-    password_digest "MyText"
-    email "MyText"
+    password "This is my password. There are many like it, but this one is mine."
+    email "Opakawagalaga@Eupanifahorious.net"
   end
 end

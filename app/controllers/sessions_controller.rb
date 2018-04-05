@@ -8,7 +8,4 @@ class SessionsController < ApplicationController
 
   end
 
-  def delete
-
-  end
 end
