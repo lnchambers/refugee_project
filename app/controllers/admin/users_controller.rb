@@ -1,4 +1,4 @@
-class Admin::UsersController < BaseController
+class Admin::UsersController < Admin::BaseController
   before_action :check_auth
 
   def new
@@ -15,5 +15,5 @@ class Admin::UsersController < BaseController
 
   def show
   end
-  
+
 end
