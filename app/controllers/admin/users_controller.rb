@@ -14,6 +14,7 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def show
+    @requests = Request.all
   end
 
 end
