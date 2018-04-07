@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   devise_for :users
   get "/dashboard/:id", to: 'dashboard#show'
 
@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users, only: [:new, :create, :update, :delete]
     get "/dashboard", to: 'users#show'
+    resources :requests, only: [:index]
   end
 
 end

@@ -13,5 +13,13 @@ describe "As an admin" do
 
       expect(current_path).to eq("/admin/users/new")
     end
+
+    it "I can see a link to view all requests" do
+      visit admin_dashboard_path
+
+      click_on "See past requests"
+
+      expect(current_path).to eq("/admin/requests")
+    end
   end
 end
