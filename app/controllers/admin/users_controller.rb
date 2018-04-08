@@ -2,6 +2,7 @@ class Admin::UsersController < Admin::BaseController
   before_action :check_auth
 
   def new
+    @user = User.new
   end
 
   def create
