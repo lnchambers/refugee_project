@@ -5,9 +5,7 @@ describe "As a visitor" do
     it "I can see a link to login" do
         visit root_path
 
-        click_on "Login"
-
-        expect(current_path).to eq(new_user_session_path)
+        expect(page).to have_content("Login")
     end
 
     it "I cannot create an account" do
