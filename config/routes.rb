@@ -5,11 +5,11 @@ Rails.application.routes.draw do
 
   root "welcome#index"
 
-  get "/login", to: "sessions#new"
-
-  post "/login", to: "sessions#create"
-
-  delete "/logout", to: "sessions#destroy"
+  devise_scope :sessions do
+    get "/login", to: "sessions#new"
+    post "/login", to: "sessions#create"
+    delete "/logout", to: "sessions#destroy"
+  end
 
   resources :requests, only: [:show, :new, :create]
 
