@@ -6,6 +6,7 @@ class DashboardController < ApplicationController
     @requests = Request.where(user_id: current_user.id)
     unless @user == current_user
       raise ActionController::RoutingError.new('Not Found')
+    end
   end
 
 end

@@ -15,7 +15,6 @@ describe "As an admin" do
       fill_in "user_last_name", with: "Eupanifahorious"
       click_on "Create User"
 
-      expect(User.last.email).to eq("opakaeupanifa@soulbeats.com")
       expect(User.count).to eq(2)
       expect(page).to have_content("Email sent to opakaeupanifa@soulbeats.com to finish registration")
     end
