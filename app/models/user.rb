@@ -7,4 +7,5 @@ class User < ApplicationRecord
   validates_presence_of :username, :first_name, :role
   validates_uniqueness_of :username
   enum role: ['user', 'admin']
+  has_many :requests
 end

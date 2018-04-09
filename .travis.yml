@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+- 2.4.1
+services:
+ - postgresql
+before_script:
+ - psql -c 'create database travis_ci_test;' -U postgres
+deploy:
+ api_key:
+   secure: 4QCcQ0iW8NeUDpO25q8n7Q

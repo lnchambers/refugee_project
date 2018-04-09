@@ -4,7 +4,7 @@ describe "As an admin" do
   before :each do
     @admin = create(:admin)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@admin)
-    @request_1 = create(:request)
+    @request_1 = create(:request, user: @admin)
     @request_2 = create(:request)
   end
   describe "when I visit the request index" do

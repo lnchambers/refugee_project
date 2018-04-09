@@ -1,5 +1,7 @@
 You are signed on as <%= @user.username %>
 
+<p><%= link_to "Make New Request", new_request_path %></p>
+
 <p>Your past requests</p>
 
 <% @requests.each do |request| %>
