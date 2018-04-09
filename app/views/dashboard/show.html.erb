@@ -1,1 +1,7 @@
 You are signed on as <%= @user.username %>
+
+<p>Your past requests</p>
+
+<% @requests.each do |request| %>
+  Request ID: <%= link_to request.id, request_path(request) %>
+<% end %>
