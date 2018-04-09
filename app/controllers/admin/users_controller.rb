@@ -8,9 +8,11 @@ class Admin::UsersController < Admin::BaseController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:notice] = "Email sent to #{user.email}to finish registration"
+      flash[:notice] = "Email sent to #{@user.email} to finish registration"
+      redirect_to new_admin_user_path
     else
       flash[:notice] = "Something went wrong: Please try again"
+      redirect_to new_admin_user_path
     end
   end
 
@@ -26,6 +28,8 @@ class Admin::UsersController < Admin::BaseController
 
   private
 
-    params.require(:user).permit(:email, :first_name, :last_name)
+  def user_params
+    params.require(:user).permit(:email, :first_name, :last_name, :username, :password)
+  end
 
 end

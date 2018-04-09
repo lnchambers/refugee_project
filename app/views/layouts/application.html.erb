@@ -23,6 +23,9 @@
     <% if flash[:error] %>
       <div class="notice"><%= flash[:error].html_safe %></div>
     <% end %>
+    <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice].html_safe %></div>
+    <% end %>
     <%= yield %>
   </body>
 </html>

@@ -10,12 +10,13 @@ describe "As an admin" do
       visit new_admin_user_path
 
       fill_in "user_email", with: "opakaeupanifa@soulbeats.com"
+      fill_in "user_username", with: "Opakawaganame"
       fill_in "user_first_name", with: "Opakawagalaga"
       fill_in "user_last_name", with: "Eupanifahorious"
-      click_on "Sign up"
+      click_on "Create User"
 
       expect(User.last.email).to eq("opakaeupanifa@soulbeats.com")
-      expect(User.count).to eq(1)
+      expect(User.count).to eq(2)
       expect(page).to have_content("Email sent to opakaeupanifa@soulbeats.com to finish registration")
     end
   end

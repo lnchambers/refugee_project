@@ -10,8 +10,6 @@ Rails.application.routes.draw do
   resources :users
   get "/dashboard/:id", to: 'dashboard#show'
 
-
-
   resources :requests, only: [:show, :new, :create]
 
   namespace :admin do
