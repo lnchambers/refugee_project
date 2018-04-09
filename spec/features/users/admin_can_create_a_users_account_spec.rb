@@ -9,9 +9,9 @@ describe "As an admin" do
     it "I am able to create a new user" do
       visit new_admin_user_path
 
-      fill_in "email", with: "opakaeupanifa@soulbeats.com"
-      fill_in "first_name", with: "Opakawagalaga"
-      fill_in "last_name", with: "Eupanifahorious"
+      fill_in "user_email", with: "opakaeupanifa@soulbeats.com"
+      fill_in "user_first_name", with: "Opakawagalaga"
+      fill_in "user_last_name", with: "Eupanifahorious"
       click_on "Sign up"
 
       expect(User.last.email).to eq("opakaeupanifa@soulbeats.com")

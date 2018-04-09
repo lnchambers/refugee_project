@@ -6,6 +6,12 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def create
+    @user = User.new(user_params)
+    if @user.save
+      flash[:notice] = "Email sent to #{user.email}to finish registration"
+    else
+      flash[:notice] = "Something went wrong: Please try again"
+    end
   end
 
   def update
@@ -17,5 +23,9 @@ class Admin::UsersController < Admin::BaseController
   def show
     @requests = Request.all
   end
+
+  private
+
+    params.require(:user).permit(:email, :first_name, :last_name)
 
 end
