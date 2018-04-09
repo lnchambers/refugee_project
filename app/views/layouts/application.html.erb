@@ -14,7 +14,7 @@
         <h1>refugee_project.</h1>
       </header>
       <nav class="nav-login">
-        <%= render partial: "layout/login" if user_signed_in? %>
+        <%= render partial: "layouts/login" if user_signed_in? %>
       </nav>
     </nav>
     <% if flash[:success] %>
@@ -22,6 +22,9 @@
     <% end %>
     <% if flash[:error] %>
       <div class="notice"><%= flash[:error].html_safe %></div>
+    <% end %>
+    <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice].html_safe %></div>
     <% end %>
     <%= yield %>
   </body>
