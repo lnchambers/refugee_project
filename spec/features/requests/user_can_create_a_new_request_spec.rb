@@ -9,12 +9,9 @@ describe "As a User" do
 
       fill_in "Age", with: 30
       fill_in "Name", with: "Richard Branson"
-      # select "amab", from: "Gender"
-      # select "Afghanistan", from: "Country of origin"
       fill_in "Group size", with: 1
-      # select "Afghanistan", from: "Country of seperation"
       click_on "Create Request"
-binding.pry
+      
       expect(page).to have_content("Request received")
     end
   end

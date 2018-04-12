@@ -9,7 +9,7 @@
 
   <div class="field">
     <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true, autocomplete: "email" %>
+    <%= f.text_field :username, autofocus: true, autocomplete: "off" %>
   </div>
 
   <div class="field">
@@ -23,7 +23,9 @@
   </div>
 
   <div class="field">
-    <%= f.hidden_field :password, value: "defaultdefault" %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    Minimum is 16 characters. The new user will be emailed this password
   </div>
 
   <div class="actions">
