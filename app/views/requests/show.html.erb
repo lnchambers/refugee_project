@@ -1,0 +1,24 @@
+Request ID: <%= @request.id %>
+Status: <%= @request.status %>
+
+<button class="info-button">See More Info?</button>
+<section class="hidden-info">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Country of Origin</th>
+      <th>Group Size</th>
+      <th>Country of Separation</th>
+    </tr>
+    <tr>
+      <td><%= @request.name %></td>
+      <td><%= @request.age %></td>
+      <td><%= @request.gender %></td>
+      <td><%= @request.country_of_origin %></td>
+      <td><%= @request.group_size %></td>
+      <td><%= @request.country_of_separation %></td>
+    </tr>
+  </table>
+</section>

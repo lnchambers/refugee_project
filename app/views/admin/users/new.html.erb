@@ -23,9 +23,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-    Minimum is 16 characters. The new user will be emailed this password
+    <%= f.hidden_field :password, value: password_generation %>
   </div>
 
   <div class="actions">

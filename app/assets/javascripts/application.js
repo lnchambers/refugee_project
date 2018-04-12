@@ -12,3 +12,11 @@
 //
 //= require rails-ujs
 //= require_tree .
+
+let infoButton = document.querySelector(".info-button");
+let infoTable = document.querySelector(".hidden-info");
+infoButton.addEventListener("click", showInfo);
+
+function showInfo () {
+  infoTable.classList.toggle("info-table")
+}
