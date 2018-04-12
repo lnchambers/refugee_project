@@ -25,3 +25,9 @@
 /node_modules
 yarn-debug.log*
 .yarn-integrity
+
+# Ignore encrypted secrets key file.
+config/secrets.yml.key
+
+localhost.crt
+localhost.key
