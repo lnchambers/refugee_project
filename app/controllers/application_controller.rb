@@ -1,10 +1,18 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  helper_method :countries, :password_generation
+  helper_method :countries, :password_generation, :current_admin?
 
   def check_auth
     raise ActionController::RoutingError.new('Not Found') unless user_signed_in?
+  end
+
+  def current_admin?
+    if current_user
+      current_user.role == "admin"
+    else
+      false
+    end
   end
 
   def countries
