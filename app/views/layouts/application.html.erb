@@ -5,13 +5,11 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
+    <link href="https://fonts.googleapis.com/css?family=Anton|Roboto|Fjalla+One" rel="stylesheet">
   </head>
 
   <body>
     <nav class="nav">
-      <header class="header">
-        <h1>refugee_project.</h1>
-      </header>
       <nav class="nav-login">
         <%= render partial: "layouts/admin-nav" if current_admin? %>
         <%= render partial: "layouts/nav" unless current_user.nil? %>

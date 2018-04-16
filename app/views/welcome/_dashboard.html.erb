@@ -1,0 +1,9 @@
+You are signed on as <%= current_user.username %>
+
+<p><%= link_to "Make New Request", new_request_path %></p>
+
+<p>Your past requests</p>
+
+<% current_user.requests.each do |request| %>
+  Request ID: <%= link_to request.id, request_path(request) %>
+<% end %>
