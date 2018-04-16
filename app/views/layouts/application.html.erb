@@ -9,13 +9,7 @@
   </head>
 
   <body>
-    <nav class="nav">
-      <nav class="nav-login">
-        <%= render partial: "layouts/admin-nav" if current_admin? %>
-        <%= render partial: "layouts/nav" unless current_user.nil? %>
-        <%= render partial: "layouts/login" if user_signed_in? %>
-      </nav>
-    </nav>
+    <%= render partial: 'layouts/nav-bar' if user_signed_in? %>
     <% if flash[:success] %>
       <div class="notice"><%= flash[:success].html_safe %></div>
     <% end %>

@@ -1,1 +1,1 @@
-Welcome, <%= current_user.first_name %>. Please <%= link_to "logout", logout_path, method: "destroy" %> <b>before</b> leaving.
+Please <%= link_to "logout", destroy_user_session_path, method: :delete %> <b>before</b> leaving.
