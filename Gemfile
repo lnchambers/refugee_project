@@ -33,6 +33,7 @@ gem 'figaro'
 gem 'devise'
 gem 'faraday'
 gem 'sendgrid-ruby'
+gem 'faker'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

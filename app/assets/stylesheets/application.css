@@ -248,8 +248,12 @@
    color: #C8474E;
  }
 
- .found {
+ .located {
    color: #4D7352;
+ }
+
+ .locate {
+   color: #C8474E;
  }
 
  .pending {
