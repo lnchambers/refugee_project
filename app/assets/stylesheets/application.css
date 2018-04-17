@@ -37,6 +37,22 @@
    color: #F4A966;
  }
 
+ h2 {
+   color: #B2827F;
+   font-size: 1.5em;
+   font-weight: bold;
+ }
+
+ h1 {
+   color: white;
+   font-size: 2em;
+   font-weight: bold;
+ }
+
+ h3 {
+   color: #B2827F;
+ }
+
  .info-button {
    background-color: #C39691;
    min-width: 100px;
@@ -216,15 +232,6 @@
    color: white;
  }
 
- .body-main h1 {
-   color: #B2827F;
- }
-
- .body-main h2 {
-   font-size: 2em;
-   font-weight: bold;
- }
-
  .body-main h3 {
    color: #B2827F;
  }
@@ -238,10 +245,7 @@
    margin: 30px;
    width: 375px;
    height: 175px;
- }
-
- .request-card h2 {
-   color: #B2827F;
+   background-color: rgba(178, 130, 127, 0.1);
  }
 
  .deceased {
@@ -268,6 +272,10 @@
    display: flex;
    flex-wrap: wrap;
    justify-content: center
+ }
+
+ .request-name {
+   font-size: 1.6em;
  }
 
  table {

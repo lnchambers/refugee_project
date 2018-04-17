@@ -3,7 +3,7 @@
     <section class="card-container">
       <% @requests.each do |request| %>
         <request class="request-card">
-          <div class="request-id">Request ID:</div><div><%= link_to request.id, request_path(request) %></div>
+          <div class="request-name"><%= link_to request.name, request_path(request) %></div>
           <h2>Status: <status class="<%= request.status.downcase %>"><%= request.status %></h2>
         </request>
       <% end %>

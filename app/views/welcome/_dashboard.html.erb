@@ -1,6 +1,6 @@
 <section class="body-container">
   <article class="body-main">
-    <h2>Welcome <%= current_user.first_name %></h2>
+    <h1>Welcome <%= current_user.first_name %></h1>
     <%= render partial: 'requests-made' if current_admin? %>
     <%= render partial: 'requests' if current_user.has_requests? %>
   </article>
