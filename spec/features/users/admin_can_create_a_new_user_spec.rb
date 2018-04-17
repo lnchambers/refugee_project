@@ -7,7 +7,7 @@ describe "As an admin" do
   end
   describe "when I visit my dashboard page" do
     it "I can see a link to create a new user" do
-      visit admin_dashboard_path
+      visit root_path
 
       click_on "Register an Investigator"
 
@@ -15,9 +15,9 @@ describe "As an admin" do
     end
 
     it "I can see a link to view all requests" do
-      visit admin_dashboard_path
+      visit root_path
 
-      click_on "See past requests"
+      click_on "See all requests"
 
       expect(current_path).to eq("/admin/requests")
     end

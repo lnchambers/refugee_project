@@ -144,20 +144,16 @@
  }
 
  .form {
-   border-style: inset;
    display: flex;
    flex-direction: column;
-   padding: 25px 50px 25px 50px;;
-   border: 2px solid #B2827F;
+   padding: 25px 50px 25px 50px;
    background-color: rgba(178, 130, 127, 0.1);
  }
 
  .new_user {
-   border-style: inset;
    display: flex;
    flex-direction: column;
-   padding: 25px 50px 25px 50px;;
-   border: 2px solid #B2827F;
+   padding: 25px 50px 25px 50px;
    background-color: rgba(178, 130, 127, 0.1);
  }
 
