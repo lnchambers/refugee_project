@@ -1,7 +1,12 @@
 <section class="body-container">
   <article class="body-main">
-    <% @requests.each do |request| %>
-      <%= request.id %>
-    <% end %>
+    <section class="card-container">
+      <% @requests.each do |request| %>
+        <request class="request-card">
+          <div class="request-id">Request ID:</div><div><%= link_to request.id, request_path(request) %></div>
+          <h2>Status: <status class="<%= request.status.downcase %>"><%= request.status %></h2>
+        </request>
+      <% end %>
+    </section>
   </article>
 </section>

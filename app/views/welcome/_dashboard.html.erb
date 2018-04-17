@@ -1,9 +1,7 @@
 <section class="body-container">
   <article class="body-main">
     <h2>Welcome <%= current_user.first_name %></h2>
-    <h1>There have been <%= current_user.requests_since_last_sign_in %> requests made since you last logged in.</h1>
-    <%= link_to "See all requests made", admin_requests_path if current_admin? %>
-
+    <%= render partial: 'requests-made' if current_admin? %>
     <%= render partial: 'requests' if current_user.has_requests? %>
   </article>
 </section>

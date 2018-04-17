@@ -30,10 +30,21 @@
 
  a {
    text-decoration: none;
+   color: white;
+ }
+
+ a:hover {
+   color: #F4A966;
  }
 
  .info-button {
+   background-color: #C39691;
+   min-width: 100px;
+   min-height: 40px;
+ }
 
+ .info-button:hover {
+   background-color: #ECC4AC;
  }
 
  .hidden-info {
@@ -72,10 +83,9 @@
    margin-top: 30px;
  }
 
- .main-login a, a:visited {
+ .main-login a {
    font-family: Fjalla One;
    background-color: #000000;
-   color: white;
    padding: 10px 18px;
    text-align: center;
    font-size: 25px;
@@ -106,6 +116,15 @@
    display: inline-block;
  }
 
+ .form {
+   border-style: inset;
+   border: 2px solid #8B968C;
+   display: flex;
+   flex-direction: column;
+   padding: 25px 50px 25px 50px;;
+   background-color: rgba(139, 150, 140, 0.25);
+ }
+
  .field {
    padding: 5px;
  }
@@ -114,6 +133,10 @@
    font-size: 20px;
    text-decoration: none;
    display: inline-block;
+ }
+
+ .select select {
+   min-width: 211px;
  }
 
  .dashboard-nav {
@@ -140,6 +163,7 @@
  }
 
  .dashboard-nav-partial .link {
+   text-decoration: none;
    background: #343434;
    font-size: 20px;
    border: 2px solid black;
@@ -228,8 +252,48 @@
    color: #4D7352;
  }
 
+ .pending {
+   color: #F4A966;
+ }
+
+ .request-id {
+   color: #B2827F;
+ }
+
  .card-container {
    display: flex;
    flex-wrap: wrap;
    justify-content: center
+ }
+
+ table {
+   border: 1px solid #C39691;
+   background-color: #B2827F;
+   margin: 20px;
+ }
+
+ tbody {
+   margin: 0px;
+ }
+
+ tr {
+   margin: 0px;
+ }
+
+ th {
+   border-right: 1px solid #C39691;
+   border-bottom: 1px solid #C39691;
+   background-color: #B2827F;
+   min-width: 100px;
+   min-height: 25px;
+   margin: 0px;
+   padding: 10px;
+ }
+
+ td {
+   border-right: 1px solid #C39691;
+   border-bottom: 1px solid #C39691;
+   background-color: #ECC4AC;
+   color: black;
+   padding: 10px;
  }

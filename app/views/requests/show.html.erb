@@ -2,7 +2,7 @@
   <article class="body-main">
     <section class="card-container">
       <request class="request-card">
-        <div>Request ID:</div><div><%= @request.id %></div>
+        <div class="request-id">Request ID:</div><div><%= @request.id %></div>
         <h2>Status: <status class="<%= @request.status.downcase %>"><%= @request.status %></h2>
       </request>
     </section>
@@ -12,7 +12,7 @@
         <tr>
           <th>Name</th>
           <th>Age</th>
-          <th>Gender</th>
+          <th class='gender'>Gender</th>
           <th>Country of Origin</th>
           <th>Group Size</th>
           <th>Country of Separation</th>

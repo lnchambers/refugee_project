@@ -1,5 +1,9 @@
 <h3>Your past requests</h3>
-
-<% current_user.requests.each do |request| %>
-  <h3>Request ID:</h3> <%= link_to request.id, request_path(request) %>
-<% end %>
+<section class="card-container">
+  <% current_user.requests.each do |request| %>
+    <request class="request-card">
+      <div class="request-id">Request ID:</div><div><%= link_to request.id, request_path(request) %></div>
+      <h2>Status: <status class="<%= request.status.downcase %>"><%= request.status %></h2>
+    </request>
+  <% end %>
+</section>
