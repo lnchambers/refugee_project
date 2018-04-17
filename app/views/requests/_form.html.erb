@@ -10,6 +10,11 @@
     <%= f.text_field :name %>
   </div>
 
+  <div class="field">
+    <%= f.label :group_size %><br />
+    <%= f.number_field :group_size %>
+  </div>
+  
   <div class="select">
     <%= f.label :gender %><br />
     <%= f.select :gender, ["Cis-Female", "Cis-Male", "Trans-Male", "Trans-Female", "Non-Binary", "Intersex", "Other"] %>
@@ -18,11 +23,6 @@
   <div class="select">
     <%= f.label :country_of_origin %><br />
     <%= f.select :country_of_origin, countries %>
-  </div>
-
-  <div class="field">
-    <%= f.label :group_size %><br />
-    <%= f.number_field :group_size %>
   </div>
 
   <div class="select">

@@ -145,15 +145,24 @@
 
  .form {
    border-style: inset;
-   border: 2px solid #8B968C;
    display: flex;
    flex-direction: column;
    padding: 25px 50px 25px 50px;;
-   background-color: rgba(139, 150, 140, 0.25);
+   border: 2px solid #B2827F;
+   background-color: rgba(178, 130, 127, 0.1);
+ }
+
+ .new_user {
+   border-style: inset;
+   display: flex;
+   flex-direction: column;
+   padding: 25px 50px 25px 50px;;
+   border: 2px solid #B2827F;
+   background-color: rgba(178, 130, 127, 0.1);
  }
 
  .field {
-   padding: 5px;
+   padding: 7px;
  }
 
  .field input {
@@ -164,6 +173,10 @@
 
  .select select {
    min-width: 211px;
+ }
+
+ .select {
+   padding: 5px;
  }
 
  .dashboard-nav {
@@ -214,12 +227,20 @@
    background-color: black;
  }
 
+ @keyframes notice-buh-bye {
+   from { opacity: 1; }
+   to   { display: none; }
+ }
+
  .notice {
    background-color: #444147;
    display: flex;
    justify-content: center;
    color: white;
    font-size: 15pt;
+   position: relative;
+   animation: notice-buh-bye 1s infinite;
+   transition: width
  }
 
  .body-container {
@@ -253,10 +274,10 @@
    align-items: center;
    justify-content: center;
    border: 2px solid #B2827F;
+   background-color: rgba(178, 130, 127, 0.1);
    margin: 30px;
    width: 375px;
    height: 175px;
-   background-color: rgba(178, 130, 127, 0.1);
  }
 
  .deceased {
