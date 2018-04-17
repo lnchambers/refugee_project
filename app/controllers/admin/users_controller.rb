@@ -8,7 +8,9 @@ class Admin::UsersController < Admin::BaseController
   def create
     @user = User.new(user_params)
     if @user.save
-      RegistrationMailer.registered(current_user, @user, params[:password]).deliver_now
+      generated_password = password_generation
+      @user.password = generated_password
+      RegistrationMailer.registered(current_user, @user, generated_password).deliver_now
       flash[:notice] = "Email sent to #{@user.email} to finish registration"
       redirect_to new_admin_user_path
     else

@@ -10,7 +10,7 @@ describe "As a User" do
       fill_in "Age", with: 30
       fill_in "Name", with: "Richard Branson"
       fill_in "Group size", with: 1
-      click_on "Create Request"
+      click_on "Find a Family"
 
       expect(page).to have_content("Request sent successfully, retrieving results")
       expect(page).to have_content("Status: Deceased")
@@ -20,7 +20,7 @@ describe "As a User" do
 
       expect(page).to have_content("Richard Branson")
       expect(page).to have_content(30)
-      expect(page).to have_content("Cis-Male")
+      expect(page).to have_content("Cis-Female")
       expect(page).to have_content("Afghanistan")
       expect(page).to have_content(1)
     end

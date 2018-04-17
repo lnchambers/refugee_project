@@ -59,6 +59,11 @@
    margin: 10px;
  }
 
+ h5 {
+   color: #B2827F;
+   font-size: 12pt;
+ }
+
  .info-button {
    background-color: #C39691;
    min-width: 100px;

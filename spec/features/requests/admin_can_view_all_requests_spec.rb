@@ -5,7 +5,7 @@ describe "As an admin" do
     @admin = create(:admin)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@admin)
     @request_1 = create(:request, user: @admin, name: "Opakawagalaga")
-    @request_2 = create(:request, name: "Hello")
+    @request_2 = create(:request, user: @admin, name: "Hello")
   end
   describe "when I visit the request index" do
     it "I can see all requests that were made" do

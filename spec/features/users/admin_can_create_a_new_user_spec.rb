@@ -9,7 +9,7 @@ describe "As an admin" do
     it "I can see a link to create a new user" do
       visit admin_dashboard_path
 
-      click_on "Create new User"
+      click_on "Register an Investigator"
 
       expect(current_path).to eq("/admin/users/new")
     end
