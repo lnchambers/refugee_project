@@ -1,8 +1,11 @@
 <section class="body-container">
   <article class="body-main">
-    Request ID: <%= @request.id %>
-    Status: <%= @request.status %>
-
+    <section class="card-container">
+      <request class="request-card">
+        <div>Request ID:</div><div><%= @request.id %></div>
+        <h2>Status: <status class="<%= @request.status.downcase %>"><%= @request.status %></h2>
+      </request>
+    </section>
     <button class="info-button">See More Info?</button>
     <section class="hidden-info">
       <table>
