@@ -1,0 +1,5 @@
+<h3>Your past requests</h3>
+
+<% current_user.requests.each do |request| %>
+  <h3>Request ID:</h3> <%= link_to request.id, request_path(request) %>
+<% end %>

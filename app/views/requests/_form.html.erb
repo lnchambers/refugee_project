@@ -1,23 +1,37 @@
 <%= form_for @request do |f| %>
 
-  <%= f.label :age %>
-  <%= f.number_field :age %>
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= f.number_field :age %>
+  </div>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
 
-  <%= f.label :gender %>
-  <%= f.select :gender, ["Cis-Male", "Cis-Female", "Trans-Male", "Trans-Female", "Non-Binary", "Intersex", "Other"] %>
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.select :gender, ["Cis-Male", "Cis-Female", "Trans-Male", "Trans-Female", "Non-Binary", "Intersex", "Other"] %>
+  </div>
 
-  <%= f.label :country_of_origin %>
-  <%= f.select :country_of_origin, countries %>
+  <div class="field">
+    <%= f.label :country_of_origin %><br />
+    <%= f.select :country_of_origin, countries %>
+  </div>
 
-  <%= f.label :group_size %>
-  <%= f.number_field :group_size %>
+  <div class="field">
+    <%= f.label :group_size %><br />
+    <%= f.number_field :group_size %>
+  </div>
 
-  <%= f.label :country_of_separation %>
-  <%= f.select :country_of_separation, countries  %>
+  <div class="field">
+    <%= f.label :country_of_separation %><br />
+    <%= f.select :country_of_separation, countries  %>
+  </div>
 
-  <%= f.submit %>
+  <div class="actions">
+    <%= f.submit "Find a Family" %>
+  </div>
 
 <% end %>

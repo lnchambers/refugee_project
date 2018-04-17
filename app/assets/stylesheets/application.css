@@ -14,11 +14,22 @@
  *= require_self
  */
 
+ *,
+ *:after,
+ *:before {
+    box-sizing: border-box;
+ }
+
  body {
    margin: 0px;
    height: 100%;
    width: 100%;
    font-family: Roboto;
+   background-color: black;
+ }
+
+ a {
+   text-decoration: none;
  }
 
  .info-button {
@@ -95,6 +106,10 @@
    display: inline-block;
  }
 
+ .field {
+   padding: 5px;
+ }
+
  .field input {
    font-size: 20px;
    text-decoration: none;
@@ -115,13 +130,37 @@
  .dashboard-nav-partial {
    color: white;
    display: flex;
-   align-items: flex-end;
    flex-direction: column;
+   justify-content: flex-end;
+   align-items: flex-start;
+   width: 25%;
+   height: 150px;
+   position: relative;
+   top: 60px;
  }
 
- .dashboard-nav-partial p {
-   border: 2px solid #343434;
+ .dashboard-nav-partial .link {
+   background: #343434;
+   font-size: 20px;
+   border: 2px solid black;
+ }
 
+ .link a {
+   text-decoration: none;
+ }
+
+ .link {
+   display:flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   width: 71%;
+   height: 40px;
+   padding: 5px;
+   border-top-left-radius: 10%;
+ }
+
+ .link:hover {
+   background-color: black;
  }
 
  .notice {
@@ -130,4 +169,42 @@
    justify-content: center;
    color: white;
    font-size: 15pt;
+ }
+
+ .body-container {
+   display: flex;
+   justify-content: center;
+   background: url('https://i.imgur.com/4KC9vUP.png');
+   background-repeat: no-repeat;
+   background-position: top left;
+   background-size: 295px;
+   padding-top: 2.5em;
+ }
+
+ .body-main {
+   display: flex;
+   margin-top: 40px;
+   width: 85%;
+   flex-direction: column;
+   align-items: center;
+   background-color: #444147;
+   min-height: 510px;
+   color: white;
+ }
+
+ .body-main h1 {
+   color: #B2827F;
+ }
+
+ .body-main h2 {
+   font-size: 2em;
+   font-weight: bold;
+ }
+
+ .body-main h3 {
+   color: #B2827F;
+ }
+
+ .request-card {
+   
  }
