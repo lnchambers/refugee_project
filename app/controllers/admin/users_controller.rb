@@ -17,12 +17,6 @@ class Admin::UsersController < Admin::BaseController
     end
   end
 
-  def update
-  end
-
-  def delete
-  end
-
   def show
     @requests = Request.all
   end

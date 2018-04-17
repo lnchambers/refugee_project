@@ -210,7 +210,7 @@ end
 
 def gender
   [
-    "Cis-Feale",
+    "Cis-Female",
     "Cis-Male",
     "Trans-Male",
     "Trans-Female",
