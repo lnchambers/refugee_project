@@ -18,7 +18,6 @@ let infoTable = document.querySelector(".hidden-info")
 let hiddenPassword = document.querySelector(".password")
 let crouchingSelector = document.querySelector(".hide-password")
 infoButton.addEventListener("click", showInfo);
-console.log(crouchingSelector)
 crouchingSelector.addEventListener("click", functionsAreFirstClassCitizens)
 
 function showInfo () {
