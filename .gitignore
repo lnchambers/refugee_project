@@ -31,3 +31,5 @@ config/secrets.yml.key
 
 localhost.crt
 localhost.key
+
+coverage/

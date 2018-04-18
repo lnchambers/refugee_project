@@ -10,7 +10,6 @@ class Admin::UsersController < Admin::BaseController
     if @user.save
       @generated_password = password_generation
       @user.password = @generated_password
-      # RegistrationMailer.registered(current_user, @user, generated_password).deliver_now
       flash[:notice] = "Email sent to #{@user.email} to finish registration"
       redirect_to admin_user_path(@user, @generated_password)
     else

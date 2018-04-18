@@ -18,7 +18,7 @@ class RequestsController < ApplicationController
       redirect_to request_path(request)
     else
       flash[:notice] = "Something went wrong. Please try again later."
-      redirect_to '/dashboard'
+      redirect_to root_path
     end
   end
 
