@@ -84,20 +84,12 @@
    display: none;
  }
 
- .shown {
-   display: flex;
- }
-
  .hidden {
    display: none;
  }
 
- .password {
-   display: none;
- }
-
- .hide-password {
-   
+ .shown {
+   display: flex;
  }
 
  .info-table {
