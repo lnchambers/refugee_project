@@ -1,1 +1,10 @@
-<%= link_to "See past requests", admin_requests_path %>
+<section class="body-container">
+  <article class="body-main">
+    <h1>Investigator Profile</h1>
+
+    <%= render partial: 'user-created' if !flash[:notice].nil? %>
+    <%= render partial: 'requests' if !@user.requests.empty? %>
+    <h2>Requests made by <%= @user.first_name %></h2>
+    <%= render partial: 'layouts/cannot-locate' if @user.requests.empty? %>
+  </article>
+</section>

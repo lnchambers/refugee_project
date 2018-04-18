@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :requests, only: [:show, :new, :create]
 
   namespace :admin do
-    resources :users, only: [:new, :create]
+    resources :users, only: [:new, :create, :show]
     resources :requests, only: [:index]
   end
 

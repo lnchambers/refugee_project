@@ -3,7 +3,8 @@
   <% current_user.requests.each do |request| %>
     <request class="request-card">
       <div class="request-name"><%= link_to request.name, request_path(request) %></div>
-      <h2>Status: <status class="<%= request.status.downcase %>"><%= request.status %></h2>
+      <h2>Status: <status class="<%= request.status.downcase %>"><%= request.status %></status></h2>
+      <h3>Request made by <%= request.user.first_name %></h3>
     </request>
   <% end %>
 </section>
