@@ -1,6 +1,6 @@
 # Refugee Project.
 
-According to the UNHCR, a record 65.6 million individuals have been forced to flee their homes due to persecution, war, or violence. One person becomes a refugee every three seconds, meaning that the time taken to read this sentence has at least seen someone become displaced. 
+According to the UNHCR, a record 65.6 million individuals have been forced to flee their homes due to persecution, war, or violence. One person becomes a refugee every three seconds, meaning that the time taken to read this sentence has seen someone become displaced. 
 
 This project utilizes machine learning to leverage data on specific refugee migration patterns to try and reconnect families separated from each other by forced displacement. It is designed to be a tool used by investigators who have been given access by a director.
 
