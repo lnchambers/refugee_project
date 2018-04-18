@@ -50,6 +50,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_bot_rails', "~> 4.0"
   gem 'simplecov'
+  gem 'newrelic_rpm'
 end
 
 group :development do
