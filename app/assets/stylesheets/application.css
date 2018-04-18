@@ -84,7 +84,21 @@
    display: none;
  }
 
- 
+ .shown {
+   display: flex;
+ }
+
+ .hidden {
+   display: none;
+ }
+
+ .password {
+   display: none;
+ }
+
+ .hide-password {
+   
+ }
 
  .info-table {
    display: flex;

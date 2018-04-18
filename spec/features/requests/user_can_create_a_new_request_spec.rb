@@ -14,7 +14,7 @@ describe "As a User" do
 
       expect(page).to have_content("Request sent successfully, retrieving results")
       expect(page).to have_content("Status: Deceased")
-      expect(page).to have_content("See More Info?")
+      expect(page).to have_content("See More Info")
 
       find(".info-button").click
 
