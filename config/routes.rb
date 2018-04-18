@@ -8,13 +8,11 @@ Rails.application.routes.draw do
     delete "/logout", to: "sessions#destroy"
   end
   resources :users
-  get "/dashboard/:id", to: 'dashboard#show'
 
   resources :requests, only: [:show, :new, :create]
 
   namespace :admin do
-    resources :users, only: [:new, :create, :update, :delete]
-    get "/dashboard", to: 'users#show'
+    resources :users, only: [:new, :create, :show]
     resources :requests, only: [:index]
   end
 

@@ -1,0 +1,3 @@
+<h2>There have been <%= current_user.requests_since_last_sign_in %> requests made since you last logged in.</h2>
+<%= render partial: 'scoped-request-link' if current_user.requests_since_last_sign_in != 0 %>
+<%= link_to "See all requests made", admin_requests_path %>

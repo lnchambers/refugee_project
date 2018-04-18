@@ -10,7 +10,7 @@ describe "As a visitor" do
       fill_in "user_password", with: user.password
       click_on "Log in"
 
-      expect(page).to have_content("Welcome, #{user.first_name}")
+      expect(page).to have_content("Welcome #{user.first_name}")
     end
   end
 end

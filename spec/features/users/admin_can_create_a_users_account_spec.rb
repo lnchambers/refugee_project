@@ -13,7 +13,7 @@ describe "As an admin" do
       fill_in "user_username", with: "Opakawaganame"
       fill_in "user_first_name", with: "Opakawagalaga"
       fill_in "user_last_name", with: "Eupanifahorious"
-      click_on "Create User"
+      click_on "Create Investigator"
 
       expect(User.count).to eq(2)
       expect(page).to have_content("Email sent to opakaeupanifa@soulbeats.com to finish registration")

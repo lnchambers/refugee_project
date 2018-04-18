@@ -4,15 +4,15 @@ describe "As an admin" do
   before :each do
     @admin = create(:admin)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@admin)
-    @request_1 = create(:request, user: @admin)
-    @request_2 = create(:request)
+    @request_1 = create(:request, user: @admin, name: "Opakawagalaga")
+    @request_2 = create(:request, user: @admin, name: "Hello")
   end
   describe "when I visit the request index" do
     it "I can see all requests that were made" do
       visit admin_requests_path
 
-      expect(page).to have_content(@request_1.id)
-      expect(page).to have_content(@request_2.id)
+      expect(page).to have_content(@request_1.name)
+      expect(page).to have_content(@request_2.name)
     end
   end
 end

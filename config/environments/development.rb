@@ -2,6 +2,15 @@ Rails.application.configure do
   # Verifies that versions and hashed value of the package contents in the project's package.json
 
   # Settings specified here will take precedence over those in config/application.rb.
+  config.action_mailer.smtp_settings = {
+  address:              'smtp.sendgrid.net',
+  port:                 '465',
+  domain:               'example.com',
+  user_name:            ENV["SENDGRID_UN"],
+  password:             ENV["SENDGRID_PASS"],
+  authentication:       'plain',
+  enable_starttls_auto: true
+  }
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
@@ -33,7 +42,7 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { :host => "localhost:3000" }
 
-  config.action_mailer.perform_caching = false
+  config.action_mailer.perform_caching = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

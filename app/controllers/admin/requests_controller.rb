@@ -1,5 +1,5 @@
 class Admin::RequestsController < Admin::BaseController
   def index
-    @requests = Request.all
+    @requests = RequestPresenter.new(params, current_user, Request.all).requests
   end
 end

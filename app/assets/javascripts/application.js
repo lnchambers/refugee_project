@@ -14,9 +14,22 @@
 //= require_tree .
 
 let infoButton = document.querySelector(".info-button");
-let infoTable = document.querySelector(".hidden-info");
+let infoTable = document.querySelector(".hidden-info")
+let hiddenPassword = document.querySelector(".password")
+let crouchingSelector = document.querySelector(".hide-password")
 infoButton.addEventListener("click", showInfo);
+crouchingSelector.addEventListener("click", functionsAreFirstClassCitizens)
 
 function showInfo () {
   infoTable.classList.toggle("info-table")
+  if (infoButton.innerHTML === "See More Info") {
+    infoButton.innerHTML = "Hide Info Table";
+  } else {
+      infoButton.innerHTML = "See More Info";
+  }
+}
+
+function functionsAreFirstClassCitizens () {
+  hiddenPassword.classList.toggle("shown")
+  crouchingSelector.classList.toggle("hidden")
 }

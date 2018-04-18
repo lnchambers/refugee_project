@@ -8,4 +8,16 @@ class User < ApplicationRecord
   validates_uniqueness_of :username
   enum role: ['user', 'admin']
   has_many :requests
+
+  def requests_since_last_sign_in
+    if last_sign_in_at
+      Request.where(created_at: last_sign_in_at..Time.now).count
+    else
+      0
+    end
+  end
+
+  def has_requests?
+    return true if !requests.empty?
+  end
 end

@@ -9,6 +9,5 @@ FactoryBot.define do
     status "found"
     country_found "The Great Country of Kardashian"
     city_found "The Great City of Kim"
-    user
   end
 end

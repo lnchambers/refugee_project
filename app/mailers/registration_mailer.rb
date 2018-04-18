@@ -1,4 +1,4 @@
-class RegistrationMailer < ApplicationMailer
+class RegistrationMailer < Devise::Mailer
 
   def registered(admin, user, password)
     @admin = admin

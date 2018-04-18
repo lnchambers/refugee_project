@@ -1,0 +1,7 @@
+<section class="dashboard-nav">
+  <section class="dashboard-nav-partial">
+    <%= render partial: "layouts/admin-nav" if current_admin? %>
+    <%= render partial: "layouts/nav" unless current_user.nil? %>
+    <%= render partial: "layouts/login" if user_signed_in? %>
+  </section>
+</section>
