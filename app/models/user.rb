@@ -18,6 +18,6 @@ class User < ApplicationRecord
   end
 
   def has_requests?
-    return true if !requests.empty?
+    !requests.empty?
   end
 end
