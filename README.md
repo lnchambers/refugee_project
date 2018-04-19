@@ -21,6 +21,8 @@ Direct contributing to this repository will currently not be accepted. If an iss
 
 The front end was built using Ruby on Rails using PostgreSQL. Vanilla Javascript and CSS3 was utlized for the styling.
 
-The back end API was built using Ruby for the machine learning, Rails for the framework, and MongoDB for document storage
+The back end API was built using Ruby for the machine learning, Rails for the framework, and MongoDB for document storage.
+
+The project repo for the API is [here](https://github.com/lnchambers/refugee_project_backend).
 
 This app is located [here](https://refugee-project.herokuapp.com/). It is hosted on Heroku. The server is set to go to sleep after a while, so if the page takes a while to load, understand that you are waking up the server and further requests will be faster.
